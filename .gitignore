@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Runtime outputs
+gtf_cache/
+results/
+results_*/
+Job_*/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Large reference files users may drop into the repo root (the bundled mini
+# dataset FASTA index under examples/ is intentionally NOT ignored)
+*.fa.fai
+!examples/mini_dataset/mm10_mini.fa.fai

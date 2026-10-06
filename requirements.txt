@@ -1,0 +1,5 @@
+# rMATS Splice Annotation Tool 依赖
+pandas>=1.3
+openpyxl>=3.0
+pyfaidx>=0.7
+biopython>=1.79
