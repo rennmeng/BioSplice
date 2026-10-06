@@ -118,12 +118,6 @@ spliceview/
 Event coordinates follow the rMATS convention (`*Start_0base`/`*ES` columns are 0-based, `*End`/`*EE` columns
 are 1-based); the GTF index works with 0-based half-open intervals internally.
 
-## Validation
-
-The refactor from the original single-file `spliceproduce.py` changed no algorithm logic: on the bundled mini
-dataset, the original script and this package produce identical annotation columns and byte-identical GenBank
-files, and the mini-dataset rerun matches the original full-genome results (see above).
-
 ## License
 
 [MIT](LICENSE)
