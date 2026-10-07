@@ -1,4 +1,4 @@
-# SpliceView
+# BioSplice
 
 <p align="center">
   <b>Annotation of rMATS alternative splicing events at the isoform level</b><br>
@@ -10,7 +10,7 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-green">
 </p>
 
-**SpliceView** annotates significant alternative splicing events (SE / RI / A3SS / A5SS / MXE) detected by
+**BioSplice** annotates significant alternative splicing events (SE / RI / A3SS / A5SS / MXE) detected by
 [rMATS](http://rnaseq-mats.sourceforge.net/): it anchors every event onto the reference transcriptome,
 reconstructs the reference- and alternative-isoform CDS/protein sequences, classifies NMD sensitivity, and
 writes a summary Excel workbook plus per-event GenBank records.
@@ -18,14 +18,14 @@ writes a summary Excel workbook plus per-event GenBank records.
 ## Quick start
 
 ```bash
-git clone https://github.com/rennmeng/spliceview.git
-cd spliceview
+git clone https://github.com/rennmeng/BioSplice.git
+cd BioSplice
 pip install -r requirements.txt    # pandas, openpyxl, pyfaidx, biopython (Python 3.8+)
 python example.py                  # runs the bundled mini dataset end-to-end in seconds
 ```
 
 Results are written to `results_example/Job_mini/`: `Job_mini_results.xlsx` plus two GenBank records per event
-under `GB_Files/`. Optionally, `pip install .` provides the `spliceview` console command.
+under `GB_Files/`. Optionally, `pip install .` provides the `biosplice` console command.
 
 ## Usage
 
@@ -98,7 +98,7 @@ original job, which report `GENE_NOT_FOUND` instead of `PRECISE_MATCH_FAIL`.
 ## Project layout
 
 ```
-spliceview/
+BioSplice/
 ├── main.py                # CLI entry point
 ├── example.py             # one-command demo on the bundled mini dataset
 ├── scripts/               # core package
@@ -117,7 +117,3 @@ spliceview/
 
 Event coordinates follow the rMATS convention (`*Start_0base`/`*ES` columns are 0-based, `*End`/`*EE` columns
 are 1-based); the GTF index works with 0-based half-open intervals internally.
-
-## License
-
-[MIT](LICENSE)
